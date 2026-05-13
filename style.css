@@ -1,0 +1,962 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* HERO SECTION */
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2)
+    ),
+    url('images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    padding-bottom: 180px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 8%;
+}
+
+.logo{
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover{
+    color: orange;
+}
+
+.nav-links .active{
+    color: orange;
+}
+
+.nav-links .active::after{
+    content: "";
+
+    width: 100%;
+    height: 2px;
+
+    background-color: orange;
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+
+/* HERO CONTENT */
+.hero-content{
+    width: 100%;
+    min-height: 75vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8%;
+}
+
+.hero-text{
+    max-width: 700px;
+    color: white;
+}
+
+.welcome{
+    letter-spacing: 8px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1{
+    font-size: 110px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span{
+    color: orange;
+}
+
+.hero-text p{
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+
+/* BUTTON */
+
+.btn{
+    display: inline-block;
+
+    padding: 16px 35px;
+
+    background-color: orange;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: darkorange;
+    transform: translateY(-5px);
+}
+
+
+/* INFO BOX */
+.info-box{
+    width: 90%;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 40px 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.info-card{
+    width: 23%;
+    text-align: center;
+}
+
+.info-card h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.info-card p{
+    color: #555;
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 1200px){
+
+    .hero-text h1{
+        font-size: 80px;
+    }
+
+    .info-box{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .info-card{
+        width: 48%;
+    }
+}
+
+@media(max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links{
+        gap: 20px;
+    }
+
+    .hero-text h1{
+        font-size: 55px;
+    }
+
+    .hero-text p{
+        font-size: 18px;
+    }
+
+    .info-box{
+        position: relative;
+        bottom: auto;
+        margin: 20px auto;
+    }
+
+    .info-card{
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px){
+
+    .nav-links{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1{
+        font-size: 42px;
+    }
+
+    .welcome{
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+    .btn{
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+}
+
+/* ================= SUB HEADER ================= */
+
+.sub-header{
+    width: 100%;
+    min-height: 60vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.sub-header-content{
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 8%;
+}
+
+.sub-header-content h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.sub-header-content p{
+    font-size: 20px;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+
+/* ================= HISTORY PAGE ================= */
+
+.history-page{
+    padding: 100px 8%;
+    background-color: #f8f8f8;
+}
+
+.history-container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    margin-bottom: 100px;
+
+    flex-wrap: wrap;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.history-image{
+    flex: 1;
+}
+
+.history-image img{
+    width: 100%;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.history-text{
+    flex: 1;
+}
+
+.history-text h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.history-text p{
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+
+/* ================= TIMELINE ================= */
+
+.timeline-section{
+    padding: 100px 8%;
+    background-color: white;
+}
+
+.timeline-section h1{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.timeline{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.timeline-card{
+    width: 250px;
+
+    background-color: orange;
+    color: white;
+
+    padding: 40px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.timeline-card:hover{
+    transform: translateY(-10px);
+}
+
+.timeline-card h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.timeline-card p{
+    line-height: 1.7;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 992px){
+
+    .sub-header-content h1{
+        font-size: 50px;
+    }
+
+    .history-text h2{
+        font-size: 34px;
+    }
+}
+
+@media(max-width: 768px){
+
+    .history-container{
+        flex-direction: column;
+    }
+
+    .reverse{
+        flex-direction: column;
+    }
+
+    .sub-header-content h1{
+        font-size: 40px;
+    }
+
+    .sub-header-content p{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .sub-header-content h1{
+        font-size: 32px;
+    }
+
+    .timeline-section h1{
+        font-size: 36px;
+    }
+}
+
+/* ================= FOODS HEADER ================= */
+
+.foods-header{
+    width: 100%;
+    min-height: 60vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+
+/* ================= FOODS PAGE ================= */
+
+.foods-page{
+    padding: 100px 8%;
+    background-color: #f8f8f8;
+}
+
+.foods-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.foods-card{
+    width: 320px;
+
+    background-color: white;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.foods-card:hover{
+    transform: translateY(-10px);
+}
+
+.foods-card img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.foods-content{
+    padding: 25px;
+}
+
+.foods-content h2{
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.foods-content p{
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* ================= SPECIAL SECTION ================= */
+
+.food-special{
+    padding: 100px 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    flex-wrap: wrap;
+
+    background-color: white;
+}
+
+.special-text{
+    flex: 1;
+}
+
+.special-text h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.special-text p{
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.special-image{
+    flex: 1;
+}
+
+.special-image img{
+    width: 100%;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 992px){
+
+    .special-text h1{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 768px){
+
+    .food-special{
+        flex-direction: column;
+    }
+
+    .special-text h1{
+        font-size: 34px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .special-text h1{
+        font-size: 28px;
+    }
+
+    .foods-content h2{
+        font-size: 24px;
+    }
+}
+
+
+/* ================= TOURISM HEADER ================= */
+
+.tourism-header{
+    width: 100%;
+    min-height: 60vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+
+/* ================= TOURISM PAGE ================= */
+
+.tourism-page{
+    padding: 100px 8%;
+    background-color: #f8f8f8;
+}
+
+.tourism-container-page{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tourism-card{
+    width: 320px;
+
+    background-color: white;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.tourism-card:hover{
+    transform: translateY(-10px);
+}
+
+.tourism-card img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.tourism-content{
+    padding: 25px;
+}
+
+.tourism-content h2{
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.tourism-content p{
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* ================= SPECIAL SECTION ================= */
+
+.tourism-special{
+    padding: 100px 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    flex-wrap: wrap;
+
+    background-color: white;
+}
+
+.tourism-special-image{
+    flex: 1;
+}
+
+.tourism-special-image img{
+    width: 100%;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.tourism-special-text{
+    flex: 1;
+}
+
+.tourism-special-text h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.tourism-special-text p{
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery-section{
+    padding: 100px 8%;
+    background-color: #f8f8f8;
+}
+
+.gallery-section h1{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.gallery-container img{
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.gallery-container img:hover{
+    transform: scale(1.05);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 992px){
+
+    .tourism-special-text h1{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 768px){
+
+    .tourism-special{
+        flex-direction: column;
+    }
+
+    .tourism-special-text h1{
+        font-size: 34px;
+    }
+
+    .gallery-section h1{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .tourism-special-text h1{
+        font-size: 28px;
+    }
+
+    .tourism-content h2{
+        font-size: 24px;
+    }
+
+    .gallery-section h1{
+        font-size: 32px;
+    }
+}
+
+
+/* ================= FUN FACTS HEADER ================= */
+
+.funfacts-header{
+    width: 100%;
+    min-height: 60vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('images/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+
+/* ================= FUN FACTS PAGE ================= */
+
+.funfacts-page{
+    padding: 100px 8%;
+    background-color: #f8f8f8;
+}
+
+.facts-container-page{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    gap: 30px;
+}
+
+.fact-box{
+    background-color: white;
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.fact-box:hover{
+    transform: translateY(-10px);
+}
+
+.fact-number{
+    font-size: 60px;
+    font-weight: 700;
+
+    color: orange;
+
+    margin-bottom: 20px;
+}
+
+.fact-box h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.fact-box p{
+    line-height: 1.9;
+    color: #555;
+}
+
+
+/* ================= SPECIAL SECTION ================= */
+
+.funfacts-special{
+    padding: 100px 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    flex-wrap: wrap;
+
+    background-color: white;
+}
+
+.funfacts-special-text{
+    flex: 1;
+}
+
+.funfacts-special-text h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.funfacts-special-text p{
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.funfacts-special-image{
+    flex: 1;
+}
+
+.funfacts-special-image img{
+    width: 100%;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+
+/* ================= QUOTE SECTION ================= */
+
+.quote-section{
+    padding: 120px 8%;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url('images/quote-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+}
+
+.quote-box h1{
+    color: white;
+    font-size: 50px;
+    line-height: 1.5;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 992px){
+
+    .funfacts-special-text h1{
+        font-size: 40px;
+    }
+
+    .quote-box h1{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 768px){
+
+    .funfacts-special{
+        flex-direction: column;
+    }
+
+    .funfacts-special-text h1{
+        font-size: 34px;
+    }
+
+    .quote-box h1{
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .fact-number{
+        font-size: 45px;
+    }
+
+    .fact-box h2{
+        font-size: 24px;
+    }
+
+    .funfacts-special-text h1{
+        font-size: 28px;
+    }
+
+    .quote-box h1{
+        font-size: 24px;
+    }
+}
